@@ -1,0 +1,126 @@
+/* メイン */
+
+.main-inner{
+  max-width: 100vw;
+  margin: auto;
+}
+
+.search_area {
+  width: 80vw;
+  margin: 10px auto;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form {
+  width: 800px;
+  text-align: center;
+  display: flex;
+}
+
+.search-form .search-input {
+  width: 500px;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.search-form .search-btn {
+  width: 10%;
+}
+
+.icon{
+  height: 15px;
+  width: 15px;
+}
+
+.greeting__link{
+  color: #FF9900;
+  font-size: 20px;
+  font-family: serif;
+}
+
+/* スライダー */
+
+/* コンテナー */
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+/* スライダーのwrapper */
+.infinite-slider .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+/* スライド */
+.infinite-slider .swiper-slide {
+  height: 400px !important; /* 高さを指定 */
+  width: auto !important;
+}
+
+/* スライド内の画像 */
+.infinite-slider .swiper-slide img {
+  width: 600px;
+  height: 100%;
+  padding: 0 10px;
+}
+
+/* ピックアップ */
+
+.center{
+  height: 400px;
+  width: 100vw;
+}
+
+.pickup-contents{
+  width: 80vw;
+  margin: auto;
+}
+
+.service-title{
+  margin: 20px auto;
+  border-bottom: 1px solid red;
+  width: 200px;
+  text-align: center;
+}
+
+
+/* 衣食住メニュー */
+
+.ffi_btn{
+  text-align: center;
+  border-bottom: 1px solid red;
+  width: 200px;
+  margin: 40px auto;
+  color: black;
+  text-decoration: none;
+}
+
+.top_menu{
+  width: 1200px;
+  display: flex;
+}
+
+.fashion{
+  width: calc(100% / 3);
+}
+
+.heading-name {
+  text-align: center;
+  border-bottom: 1px solid red;
+  width: 200px;
+  margin: 40px auto;
+}
+
+
+
+.message {
+  display: flex;
+  font-size: 15px;
+  margin: 0 0 16px 0;
+}
+
+.message-date {
+  padding-right: 40px;
+}

@@ -1,18 +1,119 @@
-
-<main class="main">
-  <div class="inner">
-    <%# ログインしているときは以下を表示する %>
-    <% if user_signed_in? %>
-      <div class="greeting"> 
-        <%= "こんにちは、" %>
-        <%= link_to "#{current_user.name}さん", "/users/#{current_user.id}", class: :greeting__link%>
+<%= render "shared/header" %>
+<div class="main">
+  <div class="main-inner">
+    <div class="search_area">
+      <%= form_with(url: search_shop_path(:shop_id), local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "ショップを検索する", class: "search-input" %>
+        <%= form.submit "🔍", class: "search-btn" %>
+      <% end %>
+      <% if user_signed_in? %>
+      <div class="log_chk">ようこそ...
+        <%= link_to "#{current_user.username}", "#", class: :greeting__link %> さん
+        <%= image_tag("niko.svg", class: :icon) %>
       </div>
-    <% end %>
-    <%# // ログインしているときは上記を表示する %>
-    <div class="card__wrapper">
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-      <%# <%= render partial: "prototype", collection: @prototypes %>
+      <% end %>
     </div>
-  </div>
-</main>
+    <%# スライド画像 %>
+    <div class="container">
+      <div class="swiper infinite-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/70B OSAKA.jpeg" alt="画像1" /></div>
+          <div class="swiper-slide"><img src="assets/ANTRY.webp" alt="画像2" /></div>
+          <div class="swiper-slide"><img src="assets/SQUARE FURNITURE.jpeg" alt="画像3" /></div>
+          <div class="swiper-slide"><img src="assets/TRUCK FURNITURE.jpeg" alt="画像4" /></div>
+          <div class="swiper-slide"><img src="assets/Armonia.jpeg" alt="画像5" /></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="center">
+      <div class="pickup-contents">
+        <h2 class='service-title'>
+          ピックアップ
+        </h2>
 
+        <div class="top_menu">
+          <div class="fashion">
+            <h2><%= link_to "fashion", "#", class: :ffi_btn %></h2>
+            <ul class="messages">
+              <li class="message">
+                <div class="message-date">2019/10/06</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2019/10/03</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2019/09/27</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2018/10/03</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2018/09/27</div>
+                <div>##</div>
+              </li>
+            </ul>
+          </div>
+          <div class="fashion">
+            <h2 class="heading-name">food</h2>
+            <ul class="messages">
+              <li class="message">
+                <div class="message-date">2019/10/06</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2019/10/03</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2019/09/27</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2018/10/03</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2018/09/27</div>
+                <div>##</div>
+              </li>
+            </ul>
+          </div>
+          <div class="fashion">
+            <h2 class="heading-name">interior</h2>
+            <ul class="messages">
+              <li class="message">
+                <div class="message-date">2019/10/06</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2019/10/03</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2019/09/27</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2018/10/03</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2018/09/27</div>
+                <div>##</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div> 
+
+  </div>
+</div>
+<%= render "shared/footer" %>

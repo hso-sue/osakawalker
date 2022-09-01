@@ -1,0 +1,35 @@
+<body>
+  <div class="headline">大阪で過ごす休日に行きたいところが見つかるウェブサイト</div>
+  <header class="header">
+    <div class="inner">
+      <div class="nav">
+        <div class="nav__left">
+          <%= link_to image_tag("OsakaWalker LOGO.jpg", class: :logo), root_path %>
+        </div>
+        <div class="nav__center">
+          <%= link_to "カテゴリ", "#", class: :nav_link %>
+          <%= link_to "新着情報", "#", class: :nav_link %>
+          <%= link_to "ランキング", "#", class: :nav_link %>
+          <%= link_to "お問い合わせ", "#", class: :nav_link %>
+        </div>
+
+        <% if user_signed_in? %>
+        <div class="nav__right"> 
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn %>
+          <%= link_to "New Shop", new_shop_path, class: :shop__btn %>
+        </div> 
+        <% else %>
+        <div class="nav__right">
+          <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+          <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </header>
+
+  <%= yield %>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+<script src="walker.js"></script>
