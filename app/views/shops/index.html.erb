@@ -7,7 +7,7 @@
         <%= form.submit "🔍", class: "search-btn" %>
       <% end %>
       <% if user_signed_in? %>
-      <div class="log_chk">ようこそ...
+      <div class="log_chk">ようこそ
         <%= link_to "#{current_user.username}", "#", class: :greeting__link %> さん
         <%= image_tag("niko.svg", class: :icon) %>
       </div>
@@ -25,16 +25,41 @@
         </div>
       </div>
     </div>
-    
+    <%# ピックアップ %>
     <div class="center">
       <div class="pickup-contents">
-        <h2 class='service-title'>
-          ピックアップ
-        </h2>
-
+        <div class='service-title'>
+          PICK UP
+        </div>
+       <%# 衣食住新着 %>
         <div class="top_menu">
-          <div class="fashion">
-            <h2><%= link_to "fashion", "#", class: :ffi_btn %></h2>
+          <div class="fa-fo-in">
+            <%= link_to "Fashion", "#", class: :fafoin_btn %>
+            <ul class="messages">
+              <li class="message">
+                <div class="message-date">2019/10/06</div>
+                <div>堺市　藤谷商店</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2019/10/03</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2019/09/27</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2018/10/03</div>
+                <div>##</div>
+              </li>
+              <li class="message">
+                <div class="message-date">2018/09/27</div>
+                <div>##</div>
+              </li>
+            </ul>
+          </div>
+          <div class="fa-fo-in">
+            <%= link_to "Food", "#", class: :fafoin_btn %>
             <ul class="messages">
               <li class="message">
                 <div class="message-date">2019/10/06</div>
@@ -58,33 +83,8 @@
               </li>
             </ul>
           </div>
-          <div class="fashion">
-            <h2 class="heading-name">food</h2>
-            <ul class="messages">
-              <li class="message">
-                <div class="message-date">2019/10/06</div>
-                <div>##</div>
-              </li>
-              <li class="message">
-                <div class="message-date">2019/10/03</div>
-                <div>##</div>
-              </li>
-              <li class="message">
-                <div class="message-date">2019/09/27</div>
-                <div>##</div>
-              </li>
-              <li class="message">
-                <div class="message-date">2018/10/03</div>
-                <div>##</div>
-              </li>
-              <li class="message">
-                <div class="message-date">2018/09/27</div>
-                <div>##</div>
-              </li>
-            </ul>
-          </div>
-          <div class="fashion">
-            <h2 class="heading-name">interior</h2>
+          <div class="fa-fo-in">
+            <%= link_to "Interior", "#", class: :fafoin_btn %>
             <ul class="messages">
               <li class="message">
                 <div class="message-date">2019/10/06</div>
