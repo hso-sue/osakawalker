@@ -1,6 +1,6 @@
 
 .footer {
-  width: 100vw;
+  max-width: 100vw;
   color: #FFF;
   background-color: #696969;
   text-align: center;
@@ -8,8 +8,7 @@
 
 .logo-white {
   width: 30vh;
-  vertical-align: bottom;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .footer>p {
