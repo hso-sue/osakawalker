@@ -1,0 +1,85 @@
+/* ヘッダー */
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "HG正楷書体-PRO"
+}
+
+.headline{
+  width: 100vw;
+  height: 20px;
+  background-color: #FF9933;
+  font-size: 12px;
+  color: #fff;
+}
+
+.header {
+  width: 100vw;
+  background-color: #fff;
+}
+
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 300px;
+}
+
+.shop__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #000000;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #FF9900 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
+.shop__btn:hover{
+  color: #fff;
+  background: #000000;
+}
+
+.nav__btn{
+  display: inline-block;
+  padding: 0.2em 1.0em;
+  font-size: 0.8em;
+  color: #000000;
+  text-decoration: none;
+  user-select: none;
+}
+
+.nav__btn:hover{
+  opacity: 0.5;
+}
+
+.nav__center{
+  margin-right: 150px;
+}
+
+.nav_link{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  margin: 0 15px;
+
+}
+
+.nav__right{
+  font-size: 20px;
+  font-weight: 600;
+}

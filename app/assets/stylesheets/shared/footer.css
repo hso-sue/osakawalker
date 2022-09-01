@@ -1,0 +1,17 @@
+
+.footer {
+  width: 100vw;
+  color: #FFF;
+  background-color: #696969;
+  text-align: center;
+}
+
+.logo-white {
+  width: 30vh;
+  vertical-align: bottom;
+  margin: 40px 0;
+}
+
+.footer>p {
+  font-size: 14px;
+}
