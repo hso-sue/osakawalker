@@ -6,10 +6,37 @@
     <div class="nav">
         <%= link_to image_tag("OsakaWalker LOGO.jpg", class: :logo), root_path %>
       <div class="nav__center">
-        <%= link_to "Category", "#", class: :nav_link %>
-        <%= link_to "News", "#", class: :nav_link %>
-        <%= link_to "Ranking", "#", class: :nav_link %>
-        <%= link_to "Contact", "#", class: :nav_link %>
+        <ul class="nav__list">
+          <li class="nav_link">
+            <%= link_to "Category", "#" %>
+            <%# Category ドロップダウンメニュー %>
+            <ul class="dropdown__lists">
+              <%= link_to "Fashion", "#", class: :dropdown__list %>
+              <%= link_to "Food", "#", class: :dropdown__list %>
+              <%= link_to "Interior", "#", class: :dropdown__list %>
+            </ul>
+          </li>
+          <li class="nav_link">
+            <%= link_to "News", "#" %>
+            <%# News ドロップダウンメニュー %>
+            <ul class="dropdown__lists">
+            </ul>
+          </li>
+          <li class="nav_link">
+            <%= link_to "Ranking", "#" %>
+            <%# Ranking ドロップダウンメニュー %>
+            <ul class="dropdown__lists">
+            </ul>
+          </li>
+          <li class="nav_link">
+            <%= link_to "Contact", "#" %>
+            <%# Contact ドロップダウンメニュー %>
+            <ul class="dropdown__lists">
+              <%= link_to "Access", "#", class: :dropdown__list %>
+              <%= link_to "Form", "#", class: :dropdown__list %>
+            </ul>
+          </li>
+        </ul>
       </div>
       
       <%# ログイン有無で表示切り替え %>
