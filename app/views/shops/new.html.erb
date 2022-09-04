@@ -1,9 +1,87 @@
-<div class="main">
-  <div class="inner">
-    <div class="form__wrapper">
-      <h2 class="page-heading">新規プロトタイプ投稿</h2>
-        <%# 部分テンプレートでフォームを表示する %>
-        <%# <%= render partial: "form" %>
+<div class="shops-contents">
+  <header class="shops-post-header">
+    <%= link_to image_tag('OsakaWalker LOGO.jpg' , size: '185x50'), "/" %>
+
+  </header>
+  <div class="shops-post-main">
+    <h2 class="shops-post-title">ショップ情報を入力</h2>
+    <%= form_with model: @shops, local: true do |f| %>
+
+    <%# <%= render 'shared/error_messages', model: f.object %> %>
+
+    <%# ショップ画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        ショップ画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"shop-image", multiple: true %>
+      </div>
     </div>
+    <%# /ショップ画像 %>
+
+    <%# ショップのジャンル %>
+    <div class="shops-genre">
+      <div class="weight-bold-text">
+        ショップジャンル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:shop_genre_id, ShopGenre.all, :id, :name, {}, {class:"select-box", id:"shop-genre"}) %>
+    </div>
+    <%# /ショップのジャンル %>
+
+    <%# ショップ名と説明 %>
+    <div class="new-shops">
+      <div class="weight-bold-text">
+        ショップ名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :shop_name, class:"shops-text", id:"shop_name", placeholder:"ショップ名（必須 40文字まで)", maxlength:"40" %>
+      <div class="shops-explain">
+        <div class="weight-bold-text">
+          ショップの説明など
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :introduction, class:"shops-text", id:"introduction", placeholder:"ショップの説明など（必須 1,000文字まで）（テイストや特徴、アクセス手段など自由可）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /ショップ名と説明 %>
+
+    <%# ショップの所在地 %>
+    <div class="shops-place">
+      <div class="weight-bold-text">
+        <span>ショップ所在地</span>
+      </div>
+      <div class="form">
+        <div class="weight-bold-text">
+          都道府県
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"shop-prefectures"}) %>
+        <div class="weight-bold-text">
+          市区町村
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:shop_city_id, ShopCity.all, :id, :name, {},  {class:"select-box", id:"shop-city"}) %>
+        <div class="weight-bold-text">
+          それ以降
+          <span class="optional">任意</span>
+        </div>
+        <%= f.collection_select(:shoo_address_id, ShopAddress.all, :id, :name, {},  {class:"select-box", id:"shop-address"}) %>
+      </div>
+    </div>
+    <%# /ショップの所在地 %>
+
+    <%# 下部ボタン %>
+    <div class="post-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
   </div>
+  <% end %>
 </div>

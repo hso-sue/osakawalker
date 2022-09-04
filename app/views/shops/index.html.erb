@@ -4,7 +4,7 @@
   <div class="main-inner">
     <div class="upper-part">
       <%= form_with(url: search_shop_path(:shop_id), local: true, method: :get, class: "search-form") do |form| %>
-        <%= form.text_field :keyword, placeholder: "ショップを検索する", class: "search-input" %>
+        <%= form.text_field :keyword, placeholder: "Shop search...", class: "search-input" %>
         <%= form.submit "🔍", class: "search-btn" %>
       <% end %>
       <% if user_signed_in? %>
@@ -45,31 +45,21 @@
             <%= link_to image_tag("Interior.png", class: :fa_in_btn), "#" %>
           </div>
 
-          <%# 新着投稿 Fashion %>
+          <%# 新着投稿 %>
           <div class="topic">
-            <ul class="messages">
-              <li class="message">
-                <div class="message-date">2019/10/06</div>
-                <div>堺市　藤谷商店</div>
-              </li>
-              <li class="message">
-                <div class="message-date">2019/10/03</div>
-                <div>##</div>
-              </li>
-              <li class="message">
-                <div class="message-date">2019/09/27</div>
-                <div>##</div>
-              </li>
-              <li class="message">
-                <div class="message-date">2018/10/03</div>
-                <div>##</div>
-              </li>
-              <li class="message">
-                <div class="message-date">2018/09/27</div>
-                <div>##</div>
-              </li>
-            </ul>
-        
+
+            <%# 新着投稿 Fashion %>
+            <% @shops.each do |shop| %>
+              <div class="shops">
+                <div class="shops-name-index">
+                  <%= shop.shop_name %>
+                </div>
+                <div class="shops-city-index">
+                  <%= shop.shop_city.name %>
+                </div>
+              </div>
+            <% end %>
+
             <%# 新着投稿 Food %>
             <ul class="messages">
               <li class="message">

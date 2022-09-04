@@ -2,11 +2,26 @@ class ShopsController < ApplicationController
   before_action :authenticate_user!, only: [:show]
 
   def index
-    
+    @shops = Shop.order("created_at DESC")
   end
 
   def new
-    @shops = Shop.new
+    @shop = Shop.new
+  end
+
+  def create
+    @shop = Shop.new(shop_params)
+    if @shop.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def shop_params
+    params.require(:shop).permit(:shop_name, :shop_city_id, :image[])
   end
 
 end
