@@ -5,9 +5,9 @@
   </header>
   <div class="shops-post-main">
     <h2 class="shops-post-title">ショップ情報を入力</h2>
-    <%= form_with model: @shops, local: true do |f| %>
+    <%= form_with model: @shop, local: true do |f| %>
 
-    <%# <%= render 'shared/error_messages', model: f.object %> %>
+    <%# <%= render 'shared/error_messages', model: f.object %>
 
     <%# ショップ画像 %>
     <div class="img-upload">
@@ -71,7 +71,7 @@
           それ以降
           <span class="optional">任意</span>
         </div>
-        <%= f.collection_select(:shoo_address_id, ShopAddress.all, :id, :name, {},  {class:"select-box", id:"shop-address"}) %>
+        <%= f.text_area :shop_address, class:"shops-text", id:"shop_address", placeholder:"(任意)", maxlength:"40" %>
       </div>
     </div>
     <%# /ショップの所在地 %>
