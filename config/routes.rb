@@ -5,5 +5,10 @@ Rails.application.routes.draw do
     member do
       get 'search'
     end
+    collection do
+      get 'fashion'
+      get 'food'
+      get 'interior'
+    end
   end
 end

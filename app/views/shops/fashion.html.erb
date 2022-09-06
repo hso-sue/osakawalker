@@ -1,0 +1,27 @@
+<%= render "shared/second-header" %>
+
+<div class="eachshop-main">
+  <h2 class="list-title">
+    FASHION SHOP LIST
+  </h2>
+  <div class="eachshop-lists">
+    <% @fashion.each do |shop| %>
+    <div class="eachshop-list">
+      <%= image_tag(shop.images[0], class: :shop_image) %>
+      <div class="eachshop-contents">
+        <div class="eachshop-detail">
+          ショップ名：<%= shop.shop_name %><br>
+        </div>
+        <div class="eachshop-detail">
+          ショップ詳細：<%= shop.introduction %><br>
+        </div>
+        <div class="eachshop-detail-address">
+          所在地：<%= shop.prefecture.name %><%= shop.shop_city.name %><%= shop.shop_address %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

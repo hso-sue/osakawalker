@@ -2,9 +2,10 @@
 .footer {
   height: 300px;
   max-width: 100vw;
-  color: #FFF;
-  background-color: #000;
+  color: #000;
+  background-color: #eeeeee;
   text-align: center;
+  font-weight: 600;
 }
 
 .logo-white {

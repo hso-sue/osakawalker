@@ -1,0 +1,46 @@
+/* ショップ一覧画面 */
+
+.eachshop-main{
+  max-width: 80vw;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.list-title{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 40px 0;
+}
+
+.eachshop-lists{
+}
+
+
+.eachshop-list{
+  height: 200px;
+  display: flex;
+  padding: 25px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.shop_image{
+  border-radius: 3px;
+  width: 220px;
+  height: auto;
+  object-fit: cover;
+}
+
+.eachshop-contents{
+  margin-left: 40px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.eachshop-detail{
+  margin: 3px 0;
+}
+
+.eachshop-detail-address{
+  margin-top:15px ;
+}
