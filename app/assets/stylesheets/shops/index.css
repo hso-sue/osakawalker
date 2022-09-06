@@ -69,7 +69,7 @@
 
 /* スライド */
 .infinite-slider .swiper-slide {
-  height: 400px !important; /* 高さを指定 */
+  height: 400px !important;
   width: auto !important;
 }
 
