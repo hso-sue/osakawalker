@@ -1,5 +1,5 @@
 class ShopsController < ApplicationController
-  #before_action :authenticate_user!, only: [:]
+  before_action :authenticate_user!, only: [:new]
   before_action :genre, only: [:index, :fashion, :food, :interior]
 
   def index
@@ -28,7 +28,9 @@ class ShopsController < ApplicationController
   def interior
   end
 
- 
+  def show
+    @shop = Shop.find(params[:id])
+  end 
 
   private
 

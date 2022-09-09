@@ -1,0 +1,34 @@
+<%= render "shared/header" %>
+
+<div class="shopdetails-main">
+  <div class="shopdetails-inner">
+    <h2 class="shopdetails-title">
+      SHOP DETAILS
+    </h2>
+    <div class="shopdetail">
+      <div class="detail-image">
+        <%= image_tag @shop.images[0], class: 'detail_shop_image' %>
+      </div>
+      <div class="detail-contents">
+        <%= link_to image_tag("sozai_cman_jp_20220906191451.png", class: :setting_icon), "#" %>
+        <div class="detail-name">
+          <%= @shop.shop_name %>
+        </div>
+        <div class="details">
+          <div class="detail-introduction">
+           <%= @shop.introduction %><br>
+          </div>
+          <div class="detail-address">
+            <span><%= image_tag("sozai_cman_jp_20220909150352.png", class: :position_icon) %></span>
+            <%= @shop.prefecture.name %><%= @shop.shop_city.name %><%= @shop.shop_address %>
+          </div>
+          <div class="detail-user">
+            <span>post by</span><%= link_to @shop.user.username, "#" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
