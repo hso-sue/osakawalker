@@ -10,7 +10,7 @@
       <%= image_tag(shop.images[0], class: :shop_image) %>
       <div class="eachshop-contents">
         <div class="eachshop-detail-name">
-          ショップ名：<%= shop.shop_name %><br>
+          ショップ名：<%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %><br>
         </div>
         <div class="eachshop-detail-introduction">
           ショップ詳細：<%= shop.introduction %><br>

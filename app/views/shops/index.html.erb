@@ -57,7 +57,7 @@
                     <%= shop.created_at.strftime("%Y/%m/%d") %>
                   </div>
                   <div class="message-text">
-                    <%= shop.shop_name %>
+                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %><br>
                   </div>
                   <div class="message-text">
                     <%= shop.shop_city.name %>
@@ -75,7 +75,7 @@
                     <%= shop.created_at.strftime("%Y/%m/%d") %>
                   </div>
                   <div class="message-text">
-                    <%= shop.shop_name %>
+                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %><br>
                   </div>
                   <div class="message-text">
                     <%= shop.shop_city.name %>
@@ -93,7 +93,7 @@
                     <%= shop.created_at.strftime("%Y/%m/%d") %>
                   </div>
                   <div class="message-text">
-                    <%= shop.shop_name %>
+                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %><br>
                   </div>
                   <div class="message-text">
                     <%= shop.shop_city.name %>
