@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+function post (){
   const infiniteSlider = new Swiper(".infinite-slider", {
     loop: true,
     loopedSlides: 2,
@@ -9,4 +9,5 @@ window.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: false,
     },
   });
-});
+}
+window.addEventListener("DOMContentLoaded", post);

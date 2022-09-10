@@ -9,21 +9,19 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
 
   <%# トップページのスライダー %>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script src="walker.js"></script>
-
-  <%# リセットCSS %>
-  <link rel="stylesheet" href="reset.css">
-
+  <script src="swiper.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="index.css" />
+
+    <%# リセットCSS %>
+  <link rel="stylesheet" href="reset.css">
 </head>
 
 <body>
     <%= yield %>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </body>
 </html>
