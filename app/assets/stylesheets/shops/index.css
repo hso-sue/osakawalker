@@ -122,9 +122,19 @@
   width: 120px;
 }
 
+.fa_in_btn:hover{
+  background-color: #FF9933;
+  border-radius: 30% 70% 35% 65% / 50% 50% 50%
+}
+
 .food_btn {
   height: 80px;
   width: 90px;
+}
+
+.food_btn:hover{
+  background-color: #FF9933;
+  border-radius: 30% 70% 35% 65% / 50% 50% 50%
 }
 
 .topic{
