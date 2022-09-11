@@ -3,7 +3,7 @@ function post (){
     loop: true,
     loopedSlides: 2,
     slidesPerView: "auto",
-    speed: 8000,
+    speed: 20000,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
