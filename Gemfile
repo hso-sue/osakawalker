@@ -58,3 +58,5 @@ gem 'pry-rails'
 gem 'active_hash'
 
 gem 'mini_magick'
+
+gem "aws-sdk-s3", require: false
