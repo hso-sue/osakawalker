@@ -44,6 +44,7 @@ https://docs.google.com/spreadsheets/d/1zs7lwFkzWQT5GHFKyq5ZmdqEJGZRQ1bsxOiiUoPG
 ## 実装した機能についての画像やGIFおよびその説明
 
 <img src="https://i.gyazo.com/e53897564819b5cce634474525ee6e9d.gif" width="500">
+
 <img src="https://i.gyazo.com/4c2876aa5b502fdee4a83558b89b7f4d.gif" width="500">
 
 ## 実装予定の機能
