@@ -24,7 +24,7 @@ https://osakawalker.herokuapp.com/
 
 1.トップページ（一覧ページ）のヘッダーからユーザー新規登録を行う  
 <img src="https://i.gyazo.com/488f232fbd13d64224aebfdd720e683f.png" width="500">  
-2.NewShopボタンからショップの内容（画像・店名・説明・所在地）を入力し投稿する  
+2.NewShopボタンからショップの内容（画像・店ジャンル・ショップ名・説明・所在地）を入力し投稿する  
 <img src="https://i.gyazo.com/99b78923570f798a38d510095ec5191e.png" width="500">  
 
 <!-- ### 口コミを投稿する -->

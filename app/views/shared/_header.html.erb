@@ -4,37 +4,28 @@
   </div>
   <div class="header-main">
     <div class="nav">
-        <%= link_to image_tag("OsakaWalker LOGO.jpg", class: :logo), "/" %>
+        <%= link_to image_tag("OsakaWalker LOGO.jpg", class: :logo), root_path %>
       <div class="nav__center">
         <ul class="nav__list">
           <li class="nav_link">
             <%= link_to "FASHION", fashion_shops_path %>
-            <%# Category ドロップダウンメニュー %>
+            <%# fashion ドロップダウンメニュー %>
             <ul class="dropdown__lists">
-              <%= link_to "Amekaji/", "#", class: :dropdown__list %>
-              <%= link_to "Outdoor/", "#", class: :dropdown__list %>
-              <%= link_to "Used/", "#", class: :dropdown__list %>
-              <%= link_to "Others", "#", class: :dropdown__list %>
+              <%# <%= link_to "Amekaji/", "#", class: :dropdown__list %>
             </ul>
           </li>
           <li class="nav_link">
             <%= link_to "FOOD", food_shops_path %>
-            <%# News ドロップダウンメニュー %>
+            <%# food ドロップダウンメニュー %>
             <ul class="dropdown__lists">
-              <%= link_to "Washoku/", "#", class: :dropdown__list %>
-              <%= link_to "Yōshoku/", "#", class: :dropdown__list %>
-              <%= link_to "Chūka/", "#", class: :dropdown__list %>
-              <%= link_to "Others", "#", class: :dropdown__list %>
+              <%# <%= link_to "Washoku/", "#", class: :dropdown__list %>
             </ul>
           </li>
           <li class="nav_link">
             <%= link_to "INTERIOR", interior_shops_path %>
-            <%# Ranking ドロップダウンメニュー %>
+            <%# interior ドロップダウンメニュー %>
             <ul class="dropdown__lists">
-              <%= link_to "Modern/", "#", class: :dropdown__list %>
-              <%= link_to "Hokuōfū/", "#", class: :dropdown__list %>
-              <%= link_to "Vintage/", "#", class: :dropdown__list %>
-              <%= link_to "Others", "#", class: :dropdown__list %>
+              <%# <%= link_to "Modern/", "#", class: :dropdown__list %>
             </ul>
           </li>
         </ul>
