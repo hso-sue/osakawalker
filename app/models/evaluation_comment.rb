@@ -1,0 +1,2 @@
+class EvaluationComment < ApplicationRecord
+end
