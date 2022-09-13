@@ -43,7 +43,7 @@
       <%# ログイン有無で表示切り替え %>
       <% if user_signed_in? %>
       <div class="nav__right"> 
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :logout__btn %>
         <%= link_to "New Shop", new_shop_path, class: :shop__btn %>
       </div> 
       <% else %>
