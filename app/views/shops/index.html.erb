@@ -38,71 +38,67 @@
           新着SHOPS
         </div>
 
-        <%# 衣食住 New %>
         <div class="top_menu">
-          <div class="link-icon">
-            <%= link_to image_tag("Fashion.png", class: :fa_in_btn), fashion_shops_path %>
-            <%= link_to image_tag("Food.png", class: :food_btn), food_shops_path %>
-            <%= link_to image_tag("Interior.png", class: :fa_in_btn), interior_shops_path %>
-          </div>
-
-          <%# 新着投稿 %>
-          <div class="topic">
-
-            <%# 新着投稿 Fashion %>
-            
-            <ul class="messages">
+          <%# 新着投稿 Fashion %>
+          <div class="new_shops_genre">
+            <%= link_to image_tag("Fashion.png", class: :fashion_interior_btn), fashion_shops_path %>
+            <ul class="new_shops">
               <% @fashion.first(5).each do |shop| %>
-                <li class="message">
-                  <div class="message-text">
+                <li class="new_shop_contents">
+                  <div class="new_shop_content">
                     <%= shop.created_at.strftime("%Y/%m/%d") %>
                   </div>
-                  <div class="message-text">
-                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %><br>
+                  <div class="new_shop_content">
+                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %>
                   </div>
-                  <div class="message-text">
+                  <div class="new_shop_content">
                     <%= shop.shop_city.name %>
                   </div>
                 </li>
               <% end %>
             </ul>
-           
-            <%# 新着投稿 Food %>
-           
-            <ul class="messages">
-              <% @food.first(5).each do |shop| %>
-                <li class="message">
-                  <div class="message-text">
-                    <%= shop.created_at.strftime("%Y/%m/%d") %>
-                  </div>
-                  <div class="message-text">
-                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %><br>
-                  </div>
-                  <div class="message-text">
-                    <%= shop.shop_city.name %>
-                  </div>
-                </li>
-              <% end %>
-             </ul>
-
-            <%# 新着投稿 Interior %>
-           
-            <ul class="messages">
-              <% @interior.first(5).each do |shop| %>
-                <li class="message">
-                  <div class="message-text">
-                    <%= shop.created_at.strftime("%Y/%m/%d") %>
-                  </div>
-                  <div class="message-text">
-                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %><br>
-                  </div>
-                  <div class="message-text">
-                    <%= shop.shop_city.name %>
-                  </div>
-                </li>
-              <% end %>
-             </ul>
           </div>
+
+          <%# 新着投稿 Food %>
+          <div class="new_shops_genre">
+            <%= link_to image_tag("Food.png", class: :food_btn), food_shops_path %>
+            <ul class="new_shops">
+              <% @interior.first(5).each do |shop| %>
+                <li class="new_shop_contents">
+                  <div class="new_shop_content">
+                    <%= shop.created_at.strftime("%Y/%m/%d") %>
+                  </div>
+                  <div class="new_shop_content">
+                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %>
+                  </div>
+                  <div class="new_shop_content">
+                    <%= shop.shop_city.name %>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+
+          <%# 新着投稿 Interior %>
+          <div class="new_shops_genre">
+            <%= link_to image_tag("Interior.png", class: :fashion_interior_btn), interior_shops_path %>
+            <ul class="new_shops">
+              <% @interior.first(5).each do |shop| %>
+                <li class="new_shop_contents">
+                  <div class="new_shop_content">
+                    <%= shop.created_at.strftime("%Y/%m/%d") %>
+                  </div>
+                  <div class="new_shop_content">
+                    <%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %>
+                  </div>
+                  <div class="new_shop_content">
+                    <%= shop.shop_city.name %>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          
         </div>
       </div>
     </div> 
