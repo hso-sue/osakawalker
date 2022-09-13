@@ -63,7 +63,7 @@
           <div class="new_shops_genre">
             <%= link_to image_tag("Food.png", class: :food_btn), food_shops_path %>
             <ul class="new_shops">
-              <% @interior.first(5).each do |shop| %>
+              <% @food.first(5).each do |shop| %>
                 <li class="new_shop_contents">
                   <div class="new_shop_content">
                     <%= shop.created_at.strftime("%Y/%m/%d") %>
@@ -98,7 +98,7 @@
               <% end %>
             </ul>
           </div>
-          
+
         </div>
       </div>
     </div> 
