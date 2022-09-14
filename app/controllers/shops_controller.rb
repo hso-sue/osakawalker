@@ -17,6 +17,8 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
+    @evaluation_comment = EvaluationComment.new
+    @evaluation_comments = @shop.evaluation_comments.includes(:user)
   end 
 
   private
@@ -28,6 +30,6 @@ class ShopsController < ApplicationController
   end
 
   def shop_params
-    params.require(:shop).permit({images:[]}, :shop_genre_id, :shop_name, :introduction, :prefecture_id, :shop_city_id, :shop_address).merge(user_id: current_user.id)
+    params.require(:shop).permit({images:[]}, :shop_genre_id, :shop_name, :introduction, :prefecture_id, :shop_city_id, :shop_address, :evaluation).merge(user_id: current_user.id)
   end
 end

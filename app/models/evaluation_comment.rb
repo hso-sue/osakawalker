@@ -1,6 +1,6 @@
 class EvaluationComment < ApplicationRecord
   belongs_to :user
-  belongs_to :shops
+  belongs_to :shop
 
   validates :title,   presence: true
   validates :content, presence: true

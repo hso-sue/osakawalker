@@ -1,6 +1,7 @@
 class Shop < ApplicationRecord
   
   belongs_to :user
+  has_many :evaluation_comments
   has_many_attached :images
 
   validates :shop_name,    presence: true
