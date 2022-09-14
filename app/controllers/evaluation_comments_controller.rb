@@ -1,7 +1,7 @@
 class EvaluationCommentsController < ApplicationController
   def create
     comment = EvaluationComment.create(comment_params)
-    redirect_to "/shops/#{evaluation_comment.shop.id}"
+    redirect_to root_path
   end
 
   private
