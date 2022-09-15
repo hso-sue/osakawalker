@@ -3,7 +3,6 @@ class EvaluationComment < ApplicationRecord
   belongs_to :shop
 
   validates :title,   presence: true
-  validates :content, presence: true
 
   validates :rate, numericality: {
     less_than_or_equal_to: 5,
