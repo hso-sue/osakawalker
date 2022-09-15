@@ -88,6 +88,13 @@ span{
   text-align: right;
 }
 
+.detail-user a{
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  color: #8B4513;
+}
+
 /* /ショップ詳細画面 */
 
 /* 口コミ投稿フォーム */
@@ -164,6 +171,9 @@ span{
   border-radius: 3px;
 }
 
+.evaluation-post-btn:hover{
+  color: #eeeeee;
+}
 /* /口コミ投稿フォーム */
 
 /* 口コミ一覧 */
@@ -188,7 +198,7 @@ span{
   align-items: center;
 }
 
-a{
+.evaluation-list-name a{
   font-weight: 600;
   font-size: 18px;
   text-decoration: none;
