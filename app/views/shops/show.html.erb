@@ -62,38 +62,37 @@
       <% end %>
       <%# /口コミ投稿フォーム %>
     </div>
-      <%# 口コミ一覧 %>
-      <div class="evaluation_comments">
-        <div class="evaluation-comments-title"><%= @shop.shop_name %>  クチコミ一覧</div>
-        <div class="evaluation-lists">
-          <% @evaluation_comments.each do |comment| %>
-            <div class="evaluation-group">
-              <div class="evaluation-row">
-                <div class="evaluation-list-name">
-                  <%= link_to comment.user.username, "/users/#{comment.user_id}" %>
-                </div>
-                <div class="evaluation-list-title">
-                  <%= comment.title %>
-                </div>
-                <div class="shop-evaluation" data-score="<%= comment.rate %>"></div>
-                <div class="score-display">
-                  （<%= comment.rate %>点）
-                </div>
-                </div>
+    <%# 口コミ一覧 %>
+    <div class="evaluation_comments">
+      <div class="evaluation-comments-title"><%= @shop.shop_name %>  クチコミ一覧</div>
+      <div class="evaluation-lists">
+        <% @evaluation_comments.each do |comment| %>
+          <div class="evaluation-group">
+            <div class="evaluation-row">
+              <div class="evaluation-list-name">
+                <%= link_to comment.user.username, "/users/#{comment.user_id}" %>
               </div>
-              <div class="evaluation-list-content">
-                <%= comment.content %>
-              </div> 
+              <div class="evaluation-list-title">
+                <%= comment.title %>
+              </div>
+              <div class="shop-evaluation" data-score="<%= comment.rate %>"></div>
+              <div class="score-display">
+                （<%= comment.rate %>点）
+              </div>
+              </div>
             </div>
-          <% end %>
-        </div>
+            <div class="evaluation-list-content">
+              <%= comment.content %>
+            </div> 
+          </div>
+        <% end %>
       </div>
-      <%# /口コミ一覧 %>
-
-    
+    </div>
+    <%# /口コミ一覧 %>
   </div>
 </div>
 
+<%# クチコミ投稿の評価 %>
 <script>
   $('.rating-form').raty({
       starOn: "<%= asset_path('star-on.png') %>",
@@ -104,6 +103,7 @@
   });
 </script>
 
+<%# クチコミ一覧の評価 %>
 <script>
   $('.shop-evaluation').raty({
     readOnly: true,
