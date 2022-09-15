@@ -33,63 +33,64 @@
   <div class="evaluation_container">
 
     <%# 口コミ投稿フォーム %>
-    <div class="evaluation-field">
-      <div class="evaluation-inner">
-        <div class="evaluation-title">
-          口コミを投稿する
+    <div class="evaluation-inner">
+      <div class="evaluation-title">
+        クチコミを投稿する
+      </div>
+      <% if user_signed_in? %>
+        <%= form_with(model: [@shop, @evaluation_comment], local: true) do |f| %>
+
+        <div class="form-parts">
+          <div class="title-label">
+            <%= f.label :title, 'タイトル', class:"title-label" %>
+          </div>
+          <%= f.text_field :title, class: "title-form" %>
         </div>
-        <% if user_signed_in? %>
-          <%= form_with(model: [@shop, @evaluation_comment], local: true) do |f| %>
-
-          <div class="form-parts">
-            <div class="title-label">
-              <%= f.label :title, 'タイトル', class:"title-label" %>
+        <div class="form-parts">
+          <%= f.label :content, '口コミ内容', class:"content-label" %>
+          <%= f.text_area :content, rows:'5', placeholder:"口コミ内容がなくても、タイトルと評価のみで投稿できます。まずは投稿してみましょう！投稿してから編集もできますよ！", class: "content-form" %>
+        </div>
+        <div class="rating-form">  
+          <div class="rating-star">評価</div>
+          <%= f.hidden_field :rate %>
+        </div>
+        <%= f.submit "投稿", class:'evaluation-post-btn' %>
+        <% end %>
+      <% else %>
+        <strong><p>※※※ クチコミの投稿には新規登録/ログインが必要です ※※※</p>
+        </strong>
+      <% end %>
+      <%# /口コミ投稿フォーム %>
+    </div>
+      <%# 口コミ一覧 %>
+      <div class="evaluation_comments">
+        <div class="evaluation-comments-title"><%= @shop.shop_name %>  クチコミ一覧</div>
+        <div class="evaluation-lists">
+          <% @evaluation_comments.each do |comment| %>
+            <div class="evaluation-group">
+              <div class="evaluation-row">
+                <div class="evaluation-list-name">
+                  <%= link_to comment.user.username, "/users/#{comment.user_id}" %>
+                </div>
+                <div class="evaluation-list-title">
+                  <%= comment.title %>
+                </div>
+                <div class="shop-evaluation" data-score="<%= comment.rate %>"></div>
+                <div class="score-display">
+                  （<%= comment.rate %>点）
+                </div>
+                </div>
+              </div>
+              <div class="evaluation-list-content">
+                <%= comment.content %>
+              </div> 
             </div>
-            <%= f.text_field :title, class: "title-form" %>
-          </div>
-          <div class="form-parts">
-            <%= f.label :content, '口コミ内容', class:"content-label" %>
-            <%= f.text_area :content, rows:'5', placeholder:"口コミ内容がなくても、タイトルと評価のみで投稿できます。まずは投稿してみましょう！投稿してから編集もできますよ！", class: "content-form" %>
-          </div>
-          <div class="rating-form">  
-            <div class="rating-star">評価</div>
-            <%= f.hidden_field :rate %>
-          </div>
-          <%= f.submit "投稿", class:'evaluation-post-btn' %>
           <% end %>
-        <% else %>
-          <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
-          </strong>
-        <% end %>
+        </div>
       </div>
-    </div>
-    <%# /口コミ投稿フォーム %>
+      <%# /口コミ一覧 %>
 
-    <%# 口コミ一覧 %>
-    <div class="evaluation_comments">
-      <h4>＜口コミ一覧＞</h4>
-      <div class="evaluation-lists">
-        <% @evaluation_comments.each do |comment| %>
-          <div class="evaluation-group">
-            <div class="evaluation-row1">
-              <%= comment.title %>
-              <div class="shop-evaluation" data-score="<%= comment.rate %>"></div>
-              <div class="score-display">
-                （<%= comment.rate %>点）
-              </div>
-              </div>
-            </div>
-            <div class="evaluation-row2">
-              <%= comment.content %>
-            </div>
-            <div class="evaluation-row3">
-              <%= link_to comment.user.username, "/users/#{comment.user_id}" %>
-            </div> 
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <%# /口コミ一覧 %>
+    
   </div>
 </div>
 
