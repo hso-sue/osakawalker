@@ -7,7 +7,7 @@
     <h2 class="shops-post-title">ショップ情報を入力</h2>
     <%= form_with model: @shop, local: true do |f| %>
 
-    <%# <%= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
 
     <%# ショップ画像 %>
     <div class="img-upload">
@@ -40,13 +40,13 @@
         ショップ名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :shop_name, class:"shops-text", id:"shop_name", placeholder:"ショップ名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :shop_name, class:"shops-text", id:"shop_name", placeholder:"ショップ名（必須 30文字まで)", maxlength:"40" %>
       <div class="shops-explain">
         <div class="weight-bold-text">
           ショップの説明など
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :introduction, class:"shops-text", id:"introduction", placeholder:"ショップの説明など（必須 1,000文字まで）（テイストや特徴、アクセス手段など自由可）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :introduction, class:"shops-text", id:"introduction", placeholder:"ショップの説明など（必須 300文字まで）（テイストや特徴、アクセス手段など自由可）" ,rows:"7" ,maxlength:"300" %>
       </div>
     </div>
     <%# /ショップ名と説明 %>

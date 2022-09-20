@@ -38,17 +38,19 @@
         クチコミを投稿する
       </div>
       <% if user_signed_in? %>
-        <%= form_with(model: [@shop, @evaluation_comment], local: true) do |f| %>
+        <%= form_with(model: @comment, url: shop_evaluation_comments_path(@shop.id), local: true) do |f| %>
+
+        <%= render 'shared/error_messages', model: f.object %>
 
         <div class="form-parts">
           <div class="title-label">
             <%= f.label :title, 'タイトル', class:"title-label" %>
           </div>
-          <%= f.text_field :title, class: "title-form" %>
+          <%= f.text_field :title, placeholder:"(必須)", class: "title-form" %>
         </div>
         <div class="form-parts">
-          <%= f.label :content, '口コミ内容', class:"content-label" %>
-          <%= f.text_area :content, rows:'5', placeholder:"口コミ内容がなくても、タイトルと評価のみで投稿できます。まずは投稿してみましょう！投稿してから編集もできますよ！", class: "content-form" %>
+          <%= f.label :content, 'クチコミ内容', class:"content-label" %>
+          <%= f.text_area :content, rows:'5', placeholder:"クチコミ内容がなくても、タイトルと評価のみで投稿できます", class: "content-form" %>
         </div>
         <div class="rating-form">  
           <div class="rating-star">評価</div>
@@ -62,30 +64,38 @@
       <% end %>
       <%# /口コミ投稿フォーム %>
     </div>
+
     <%# 口コミ一覧 %>
-    <div class="evaluation_comments">
-      <div class="evaluation-comments-title"><%= @shop.shop_name %>  クチコミ一覧</div>
-      <div class="evaluation-lists">
+    <div class="evaluation-inner">
+      <div class="evaluation_comments">
+        <div class="evaluation-comments-title">
+          <%= @shop.shop_name %>  クチコミ一覧
+        </div>
+        
+        <%# コメント繰り返し処理 %>
         <% @evaluation_comments.each do |comment| %>
-          <div class="evaluation-group">
-            <div class="evaluation-row">
-              <div class="evaluation-list-name">
-                <%= link_to comment.user.username, "/users/#{comment.user_id}" %>
+          <div class="evaluation-lists">
+            <div class="evaluation-group">
+              <div class="evaluation-row">
+                <div class="evaluation-list-name">
+                  <%= link_to comment.user.username, "/users/#{comment.user_id}" %>
+                </div>
+                <div class="evaluation-list-title">
+                  <%= comment.title %>
+                </div>
+                <div class="shop-evaluation" data-score="<%= comment.rate %>"></div>
+                <div class="score-display">
+                  （<%= comment.rate %>点）
+                </div>
               </div>
-              <div class="evaluation-list-title">
-                <%= comment.title %>
-              </div>
-              <div class="shop-evaluation" data-score="<%= comment.rate %>"></div>
-              <div class="score-display">
-                （<%= comment.rate %>点）
-              </div>
-              </div>
+              <div class="evaluation-list-content">
+                <%= comment.content %>
+              </div> 
             </div>
-            <div class="evaluation-list-content">
-              <%= comment.content %>
-            </div> 
           </div>
         <% end %>
+        <%# /コメント繰り返し処理 %>
+
       </div>
     </div>
     <%# /口コミ一覧 %>

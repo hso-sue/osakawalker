@@ -16,8 +16,8 @@ class ShopsController < ApplicationController
   end
 
   def show
+    @comment = EvaluationComment.new
     @shop = Shop.find(params[:id])
-    @evaluation_comment = EvaluationComment.new
     @evaluation_comments = @shop.evaluation_comments.includes(:user).order("created_at DESC")
   end 
 

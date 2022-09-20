@@ -108,7 +108,7 @@ span{
 
 .evaluation-inner{
   max-width: 80vw;
-  margin: 0 auto;
+  margin: 30px auto;
   background-color: #eeeeee;
   padding: 20px 40px;
   border-radius: 5px;
@@ -180,9 +180,8 @@ span{
 
 .evaluation_comments{
   max-width: 80vw;
-  margin: 20px auto;
+  margin: 0 auto;
   background-color: #eeeeee;
-  padding: 20px 40px;
   border-radius: 5px;
 }
 
@@ -191,6 +190,13 @@ span{
   font-weight: 600;
   padding-left: 20px;
   margin-bottom: 20px;
+}
+
+.evaluation-lists{
+  max-width: 80vw;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  padding: 5px 0;
 }
 
 .evaluation-row{
@@ -211,7 +217,7 @@ span{
 }
 
 .shop-evaluation{
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .evaluation-list-content{
