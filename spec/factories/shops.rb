@@ -1,15 +1,15 @@
 FactoryBot.define do
   factory :shop do
-    shop_genre_id {Faker::Team.name}
-    shop_name {Faker::Team.name}
-    introduction {Faker::Team.name}
-    prefecture_id {Faker::Team.name}
-    shop_city_id {Faker::Team.name}
-    shop_address {Faker::Team.name}
+    shop_genre_id {Faker::Number.between(from: 1, to: 100)}
+    shop_name {Faker::Lorem.sentence}
+    introduction {Faker::Lorem.sentence}
+    prefecture_id {Faker::Number.between(from: 1, to: 100)}
+    shop_city_id {Faker::Number.between(from: 1, to: 100)}
+    shop_address {Faker::Address.street_address}
     association :user
 
     after(:build) do |shop|
-      shop.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
+      shop.images.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
     end
   end
 end
