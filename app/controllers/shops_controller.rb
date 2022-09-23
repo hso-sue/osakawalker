@@ -21,6 +21,13 @@ class ShopsController < ApplicationController
     @evaluation_comments = @shop.evaluation_comments.includes(:user).order("created_at DESC")
   end 
 
+  def edit
+    @shop = Shop.find(params[:id])
+  end
+
+  def update
+  end
+
   private
 
   def genre

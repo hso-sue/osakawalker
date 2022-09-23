@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'evaluation_comments/index'
   devise_for :users
   root to: 'shops#index'
-  resources :shops, only: [:index, :new, :create, :show] do
+  resources :shops, only: [:index, :new, :create, :show, :edit, :update] do
     resources :evaluation_comments, only: :create
     member do
       get 'search'
