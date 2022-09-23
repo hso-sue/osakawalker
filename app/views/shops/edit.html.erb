@@ -79,7 +79,7 @@
     <%# 下部ボタン %>
     <div class="post-btn-contents">
       <%= f.submit "編集を完了する" ,class:"post-btn" %>
-      <%=link_to '削除する', shop_path(@shop.id), method: :delete, class:"delete-btn" %>
+      <%=link_to '削除する', shop_path(@shop.id), method: :delete, class:"delete-btn", data: {confirm: "削除しますか？"} %>
       <%=link_to 'キャンセル', shop_path(@shop.id), class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
