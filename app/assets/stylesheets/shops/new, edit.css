@@ -150,6 +150,10 @@
   margin-bottom: 4vh;
 }
 
+.post-btn:hover{
+  background-color: #FF3300;
+}
+
 .delete-btn {
   display: inline-block;
   background: #ea352d;

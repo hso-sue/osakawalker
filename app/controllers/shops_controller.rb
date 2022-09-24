@@ -42,6 +42,10 @@ class ShopsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @shops = Shop.search(params[:keyword])
+  end
+
   private
 
   def genre

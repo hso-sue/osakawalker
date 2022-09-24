@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+
+<div class="eachshop-main">
+  <h2 class="list-title">
+    SHOP SEARCH RESULTS
+  </h2>
+  <div class="eachshop-lists">
+    <% @shops.each do |shop| %>
+    <div class="eachshop-list">
+      <%= link_to image_tag(shop.images[0], class: :shop_image),shop_path(shop.id) %>
+      <div class="eachshop-contents">
+        <div class="eachshop-detail-name">
+          ショップ名：<%= link_to shop.shop_name, shop_path(shop.id), class: :detail_link %><br>
+        </div>
+        <div class="eachshop-detail-introduction">
+          ショップ詳細：<%= shop.introduction %><br>
+        </div>
+        <div class="eachshop-detail-address">
+          所在地：<%= shop.prefecture.name %><%= shop.shop_city.name %><%= shop.shop_address %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div class="search-back">
+    <%=link_to '戻る', root_path, class:"search-back-btn" %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

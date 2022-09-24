@@ -16,7 +16,11 @@ class Shop < ApplicationRecord
   belongs_to :shop_city
   belongs_to :prefecture
 
-
-
-
+  def self.search(search)
+    if search != ""
+      Shop.where('shop_name LIKE(?)', "%#{search}%")
+    else
+      render :index
+    end
+  end
 end
