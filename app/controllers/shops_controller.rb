@@ -19,6 +19,7 @@ class ShopsController < ApplicationController
 
   def show
     @comment = EvaluationComment.new
+    @comments = EvaluationComment.where(params[:shop_id])
     @evaluation_comments = @shop.evaluation_comments.includes(:user).order("created_at DESC")
   end 
 
