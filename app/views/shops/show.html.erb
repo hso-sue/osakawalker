@@ -97,9 +97,9 @@
                 <%= comment.content %>
               </div>
 
-              <%# <% if user_signed_in? && current_user.id == @comment.user_id %> %>
-              <%=link_to '削除', shop_evaluation_comment_path(@shop.id, @comments.ids), method: :delete, data: {confirm: "削除しますか？"} %>
-              <%# <% end %> %>
+              <% if user_signed_in? && current_user.id == comment.user_id %>
+                <%=link_to '削除', shop_evaluation_comment_path(@shop.id, comment.id), method: :delete, data: {confirm: "削除しますか？"} %>
+              <% end %>
 
             </div>
           </div>
