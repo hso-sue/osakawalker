@@ -43,12 +43,33 @@
   border-radius: 5px;
 }
 
+
+/* 編集ボタン */
 .setting_icon{
   float: right;
   height: 20px;
   width: 20px;
   margin-right: 50px;
 }
+
+.content-edit{
+  position: relative;  
+}
+
+.content-edit:hover .fukidashi {
+  display: inline;
+}
+
+.fukidashi {
+  position: absolute;
+  display: none;
+  padding: 2px;
+  background-color: #eeeeee;
+  right: 2%;
+  font-size: 80%; 
+  border-radius: 5px;
+}
+/* /編集ボタン */
 
 .detail-name{
   width: 700px;

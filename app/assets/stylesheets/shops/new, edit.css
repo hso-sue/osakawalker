@@ -150,10 +150,24 @@
   margin-bottom: 4vh;
 }
 
+.delete-btn {
+  display: inline-block;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 4vh;
+}
+
 .back-btn {
+  display: inline-block;
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
-  padding: 15px 35%;
+  width: 80%;
+  padding: 15px 0;
   text-decoration: none;
 }

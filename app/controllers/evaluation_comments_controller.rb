@@ -10,6 +10,13 @@ class EvaluationCommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @shop = Shop.find(params[:shop_id])
+    @comment = EvaluationComment.find(params[:id])
+    @comment.destroy
+    redirect_to shop_path(id: @shop.id) 
+  end
+
   private
   def comment_params
     params.require(:evaluation_comment).permit(:title, :content, :rate).merge(user_id: current_user.id, shop_id: params[:shop_id])

@@ -10,7 +10,12 @@
         <%= image_tag @shop.images[0], class: 'detail_shop_image' %>
       </div>
       <div class="detail-contents">
-        <%= link_to image_tag("sozai_cman_jp_20220906191451.png", class: :setting_icon), "#" %>
+        <% if user_signed_in? && current_user.id == @shop.user_id %>
+        <div class="content-edit">
+          <%= link_to image_tag("sozai_cman_jp_20220906191451.png", class: :setting_icon), edit_shop_path %>
+          <p class="fukidashi">編集</p>
+        </div>
+        <% end %>
         <div class="detail-name">
           <%= @shop.shop_name %>
         </div>
@@ -90,7 +95,12 @@
               </div>
               <div class="evaluation-list-content">
                 <%= comment.content %>
-              </div> 
+              </div>
+
+              <%# <% if user_signed_in? && current_user.id == @comment.user_id %> %>
+              <%=link_to '削除', shop_evaluation_comment_path(@shop.id, @comments.ids), method: :delete, data: {confirm: "削除しますか？"} %>
+              <%# <% end %> %>
+
             </div>
           </div>
         <% end %>
