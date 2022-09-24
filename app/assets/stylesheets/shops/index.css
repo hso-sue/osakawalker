@@ -140,19 +140,32 @@
 .fashion_interior_btn {
   height: 80px;
   width: 120px;
+  transition: all .3s;
 }
 
 .fashion_interior_btn:hover{
   background-color: #FF9933;
-  border-radius: 30% 70% 35% 65% / 50% 50% 50%
+  border-radius: 30% 70% 35% 65% / 50% 50% 50%;
 }
 
 .food_btn {
   height: 80px;
   width: 90px;
+  transition: all .3s;
 }
 
 .food_btn:hover{
+  background-color: #FF9933;
+  border-radius: 30% 70% 35% 65% / 50% 50% 50%;
+}
+
+.detail_link{
+  color: #000;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.detail_link:hover{
   background-color: #FF9933;
   border-radius: 30% 70% 35% 65% / 50% 50% 50%
 }

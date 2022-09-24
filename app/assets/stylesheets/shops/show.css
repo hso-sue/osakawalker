@@ -245,5 +245,11 @@ span{
   margin: 0 0 5px 10px;
 }
 
+.comment-delete-btn a{
+  text-decoration: none;
+  color: #000080;
+  margin-left: 10px;
+  font-size: 13px;
+}
 
 /* /口コミ一覧 */
