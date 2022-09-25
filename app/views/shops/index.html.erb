@@ -4,7 +4,7 @@
   <div class="main-inner">
     <div class="upper-part">
       <%= form_with(url: search_shop_path(:shop_id), local: true, method: :get, class: "search-form") do |form| %>
-        <%= form.text_field :keyword, placeholder: "Shop search...", class: "search-input" %>
+        <%= form.text_field :keyword, placeholder: "Shop search...", autocomplete: "off", class: "search-input" %>
         <%= form.submit "🔍", class: "search-btn" %>
       <% end %>
       <% if user_signed_in? %>

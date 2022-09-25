@@ -161,3 +161,18 @@
   text-align: right;
   cursor: pointer;
 }
+
+.registration-back {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.registration-back-btn {
+  display: inline-block;
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  width: 30%;
+  padding: 10px 0;
+  text-decoration: none;
+}

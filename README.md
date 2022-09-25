@@ -5,8 +5,8 @@ OSAKA WALKER
 
 ## アプリケーション概要
 
-大阪に限定した衣食住に関するショップをシェア・検索することが出来るアプリ。  
-クチコミを投稿することができる。
+大阪に限定した衣食住に関するショップをシェアしたり検索することが出来るアプリ。  
+ショップのクチコミを投稿することができ、他者のクチコミも閲覧できる。
 
 ## URL
 
@@ -24,19 +24,23 @@ https://osakawalker.herokuapp.com/
 ### ショップの投稿
 
 1.トップページ（一覧ページ）のヘッダーからユーザー新規登録を行う  
-<img src="https://i.gyazo.com/488f232fbd13d64224aebfdd720e683f.png" width="500">  
+<img src="https://i.gyazo.com/dd43bfd32e5e3a5bebedd131929628dc.gif" width="500">  
 2.NewShopボタンからショップの内容（画像・店ジャンル・ショップ名・説明・所在地）を入力し投稿する  
 <img src="https://i.gyazo.com/99b78923570f798a38d510095ec5191e.png" width="500">  
 
 ### 口コミを投稿する
 
 1.ショップ一覧ページのショップ名をクリックし、ショップ詳細ページに移る  
-2.ショップ詳細ページの下部分にある口コミ投稿ボタンから口コミ内容を入力し投稿する  
+<img src="https://i.gyazo.com/dde4dd8f3f19c2ae5b1d0af9e34cdfac.gif" width="500">  
+
+2.ショップ詳細ページの下部分にある口コミ投稿ボタンから口コミ内容を入力し投稿すると更に下のクチコミ一覧に反映される  
+<img src="https://i.gyazo.com/3d097faa9e25c14fbafd63cbefdfda84.gif" width="500">  
 
 ### ショップを検索する
 
 1.トップページの検索窓で任意のショップ名を入力  
 2.条件に引っかかるショップを一覧表示する  
+<img src="https://i.gyazo.com/6981d87c724454feae0b924ae2dada4f.gif" width="500">  
 
 ## アプリケーションを作成した背景
 
@@ -48,11 +52,6 @@ https://osakawalker.herokuapp.com/
 ## 洗い出した要件
 
 [要件定義シート](https://docs.google.com/spreadsheets/d/1zs7lwFkzWQT5GHFKyq5ZmdqEJGZRQ1bsxOiiUoPGVPc/edit#gid=982722306)
-
-## 実装した機能についての画像やGIFおよびその説明
-
-<img src="https://i.gyazo.com/e53897564819b5cce634474525ee6e9d.gif" width="500">  
-<img src="https://i.gyazo.com/4c2876aa5b502fdee4a83558b89b7f4d.gif" width="500">
 
 ## 実装予定の機能
 

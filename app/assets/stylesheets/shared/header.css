@@ -10,10 +10,8 @@
   font-family: "HG正楷書体-PRO";
 }
 
-.top-page-header h2{
-  margin-left: 65px;
-}
 .headline {
+  padding-left: 60px;
   max-width: 100vw;
   height: 20px;
   background-color: #FF9933;
