@@ -9,7 +9,7 @@
       <% end %>
       <% if user_signed_in? %>
       <div class="log_chk">ようこそ
-        <%= link_to "#{current_user.username}", "#", class: :greeting__link %> さん
+        <%= link_to "#{current_user.username}", user_path(current_user.id), class: :greeting__link %> さん
         <%= image_tag("niko.svg", class: :icon) %>
       </div>
       <% end %>

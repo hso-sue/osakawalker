@@ -30,7 +30,7 @@
 .shop_image{
   border-radius: 3px;
   width: 220px;
-  height: auto;
+  height: 150px;
   object-fit: cover;
 }
 

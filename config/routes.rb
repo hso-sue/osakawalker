@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'evaluation_comments/index'
   devise_for :users
   root to: 'shops#index'
+  resources :users, only: :show
   resources :shops do
     resources :evaluation_comments, only: [:create, :destroy]
     member do
