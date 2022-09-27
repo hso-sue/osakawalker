@@ -28,7 +28,7 @@
             <%= @shop.prefecture.name %><%= @shop.shop_city.name %><%= @shop.shop_address %>
           </div>
           <div class="detail-user">
-            <span>post by</span><%= link_to @shop.user.username, "#" %>
+            <span>post by</span><%= link_to @shop.user.username, user_path(@shop.user.id) %>
           </div>
         </div>
       </div>
