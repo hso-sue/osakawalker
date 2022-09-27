@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+
+<div class="mypage-main">
+  <div class="mypage-inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.username} さんの投稿一覧" %>
+      </h2>
+      <div class="mypage-lists">
+        <% @shops.each do |shop| %>
+          <div class="mypage-list">
+            <%= link_to image_tag(shop.images[0], class: :mypage_shop_image),shop_path(shop.id) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

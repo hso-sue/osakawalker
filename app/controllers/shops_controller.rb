@@ -3,7 +3,6 @@ class ShopsController < ApplicationController
   before_action :genre, only: [:index, :fashion, :food, :interior]
   before_action :common, only: [:show, :edit, :update, :destroy]
 
-
   def new
     @shop = Shop.new
   end
