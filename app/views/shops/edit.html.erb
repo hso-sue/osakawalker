@@ -87,4 +87,15 @@
   <% end %>
 </div>
 
+<script>
+  const post = document.getElementsByClassName('post-btn');
+  const posts = Array.from(post);
+
+  posts.forEach(function(postss) {
+    postss.addEventListener('click', function() {
+      window.alert('変更が正常に行われました。');
+    });
+  });
+</script>
+
 <%= render "shared/footer" %>
