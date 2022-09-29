@@ -3,10 +3,6 @@ class ShopsController < ApplicationController
   before_action :genre, only: [:index, :fashion, :food, :interior]
   before_action :common, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @shops = Shop.a("RANDOM()").limit(4)
-  end
-
   def new
     @shop = Shop.new
   end
