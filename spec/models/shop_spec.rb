@@ -7,8 +7,9 @@ RSpec.describe Shop, type: :model do
 
   describe 'ショップの投稿' do
     context '新規投稿できる場合' do
-      it "shop_address以外の項目で入力があれば投稿できる" do
+      it "shop_address以外の項目で値があれば投稿できる" do
         @shop.shop_address = ''
+        @shop.shop_name = Faker::Lorem.characters(number:20)
         expect(@shop).to be_valid
       end
     end
@@ -59,7 +60,7 @@ RSpec.describe Shop, type: :model do
         expect(@shop.errors.full_messages).to include("Shop address is too long (maximum is 40 characters)")
       end
       it "user_idが空では作成できない" do
-        @shop.user_id = 'nil'
+        @shop.user = nil
         @shop.valid?
         expect(@shop.errors.full_messages).to include("User must exist")
       end

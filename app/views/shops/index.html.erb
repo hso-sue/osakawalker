@@ -21,10 +21,11 @@
         <div class="swiper infinite-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <%= image_tag "70BOSAKA.jpeg", alt: "画像1" %>
-              <%= image_tag "SQUAREFURNITURE.jpeg", alt: "画像2" %>
-              <%= image_tag "TRUCKFURNITURE.jpeg", alt: "画像3" %>
-              <%= image_tag "Armonia.jpeg", alt: "画像4" %>
+              <% @shops.each do |shop| %>
+                <div class="mypage-list">
+                  <%= image_tag(shop.images[0]) %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
